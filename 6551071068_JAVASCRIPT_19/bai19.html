@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Mua vé xem phim</title>
+  <link rel="stylesheet" href="bai19.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="bai19.js" defer></script>
+</head>
+<body>
+
+  <form id="formDatVe">
+    <table>
+      <tr><th colspan="2">MUA VÉ XEM PHIM</th></tr>
+      <tr>
+        <td>Ngày chiếu</td>
+        <td><input type="date" id="ngayChieu" required></td>
+      </tr>
+      <tr>
+        <td>Phim</td>
+        <td>
+          <select id="phim">
+            <option value="">-- Chọn phim --</option>
+            <option value="Yêu em bất chấp">Yêu em bất chấp</option>
+            <option value="Tháng năm rực rỡ">Tháng năm rực rỡ</option>
+            <option value="Và em sẽ đến">Và em sẽ đến</option>
+            <option value="Chuyện ma lúc 3 giờ sáng">Chuyện ma lúc 3 giờ sáng</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Suất chiếu</td>
+        <td>
+          <select id="suatChieu">
+            <option value="">-- Chọn suất chiếu --</option>
+            <option value="9h – 12h" data-gia="45000">9h – 12h</option>
+            <option value="13h – 16h" data-gia="45000">13h – 16h</option>
+            <option value="17h – 20h" data-gia="45000">17h – 20h</option>
+            <option value="22h – 3h" data-gia="45000">22h – 3h</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Phòng chiếu</td>
+        <td>
+          <select id="phongChieu">
+            <option value="">-- Chọn phòng --</option>
+            <option value="Đồng" data-heso="1.0">Đồng</option>
+            <option value="Bạc" data-heso="1.2">Bạc</option>
+            <option value="Vàng" data-heso="1.5">Vàng</option>
+            <option value="Kim Cương" data-heso="2.0">Kim Cương</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Chọn chỗ ngồi</td>
+        <td>
+          <select id="choNgoi" multiple size="4">
+            <option>Ghế 01</option>
+            <option>Ghế 02</option>
+            <option>Ghế 03</option>
+            <option>Ghế 04</option>
+            <option>Ghế 05</option>
+            <option>Ghế 06</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align:center">
+          <input type="button" id="muaVe" value="Mua vé">
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  <div class="ticket" id="thongTinVe">
+    <h3>🎬 THÔNG TIN VÉ</h3>
+    <p><b>Khách hàng:</b> Nguyễn Văn A</p>
+    <p><b>Ngày chiếu:</b> <span id="outNgay"></span></p>
+    <p><b>Phim:</b> <span id="outPhim"></span></p>
+    <p><b>Suất chiếu:</b> <span id="outSuat"></span></p>
+    <p><b>Phòng chiếu:</b> <span id="outPhong"></span></p>
+    <hr>
+    <div id="outGhe"></div>
+    <hr>
+    <p class="tong">Tổng tiền: <span id="tongTien"></span> đ</p>
+  </div>
+
+</body>
+</html>
